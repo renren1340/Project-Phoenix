@@ -48,53 +48,11 @@ public class PlayerController : MonoBehaviour
         float horizontal = 0.0f;
         if (Keyboard.current.leftArrowKey.isPressed)
         {
-            horizontal = -1.0f;
-
-            //Vector3 rotate = transform.eulerAngles;
-            //if (rotate.z == 90)
-            //{
-            //    rotate.z = 90;
-            //    transform.rotation = Quaternion.Euler(rotate);
-            //}
-            //else
-            //{
-            //    if (rotate.z < 90 || rotate.z >= 270)
-            //    {
-            //        rotate.z += 1;
-            //        transform.rotation = Quaternion.Euler(rotate);
-            //    }
-            //    if (rotate.z > 90 && rotate.z < 270)
-            //    {
-            //        rotate.z -= 1;
-            //        transform.rotation = Quaternion.Euler(rotate);
-            //    }
-            //}            
-
- 
+            horizontal = -1.0f;            
         }
         else if (Keyboard.current.rightArrowKey.isPressed)
         {
             horizontal = 1.0f;
-                
-            //Vector3 rotate = transform.eulerAngles;
-            //if (rotate.z == 270)
-            //{
-            //    rotate.z = 270;
-            //    transform.rotation = Quaternion.Euler(rotate);
-            //}
-            //else
-            //{
-            //    if ((rotate.z < 270 && rotate.z >= 90))
-            //    {
-            //        rotate.z += 1;
-            //        transform.rotation = Quaternion.Euler(rotate);
-            //    }
-            //    if (rotate.z < 90 || rotate.z > 270)
-            //    {
-            //        rotate.z -= 1;
-            //        transform.rotation = Quaternion.Euler(rotate);
-            //    }
-            //}
         }
         
         Debug.Log(horizontal);
@@ -103,51 +61,10 @@ public class PlayerController : MonoBehaviour
         if (Keyboard.current.upArrowKey.isPressed)
         {
             vertical = 1.0f;
-            //Vector3 rotate = transform.eulerAngles;
-            //if (rotate.z == 0 || rotate.z == 360)
-            //{
-            //    rotate.z = 0;
-            //    transform.rotation = Quaternion.Euler(rotate);
-            //}
-            //else
-            //{
-            //    if (rotate.z < 360 && rotate.z >= 180)
-            //    {
-            //        rotate.z += 1;
-            //        transform.rotation = Quaternion.Euler(rotate);
-            //    }
-            //    if (rotate.z > 0 && rotate.z < 180)
-            //    {
-            //        rotate.z -= 1;
-            //        transform.rotation = Quaternion.Euler(rotate);
-            //    }
-
-            //}
-
         }
         else if (Keyboard.current.downArrowKey.isPressed)
         {
             vertical = -1.0f;
-            //Vector3 rotate = transform.eulerAngles;
-            //if (rotate.z == 180)
-            //{
-            //    rotate.z = 180;
-            //    transform.rotation = Quaternion.Euler(rotate);
-            //}
-            //else
-            //{
-            //    if (rotate.z < 180)
-            //    {
-            //        rotate.z += 1;
-            //        transform.rotation = Quaternion.Euler(rotate);
-            //    }
-            //    if (rotate.z > 180)
-            //    {
-            //        rotate.z -= 1;
-            //        transform.rotation = Quaternion.Euler(rotate);
-            //    }
-            //}
-
         }
         Debug.Log(vertical);
 
@@ -155,25 +72,6 @@ public class PlayerController : MonoBehaviour
         {
             vertical = 0.8f;
             horizontal = -0.8f;
-            //Vector3 rotate = transform.eulerAngles;
-            //if (rotate.z == 45)
-            //{
-            //    rotate.z = 45;
-            //    transform.rotation = Quaternion.Euler(rotate);
-            //}
-            //else
-            //{
-            //    if ((rotate.z < 45))
-            //    {
-            //        rotate.z += 1;
-            //        transform.rotation = Quaternion.Euler(rotate);
-            //    }
-            //    if (rotate.z > 45)
-            //    {
-            //        rotate.z -= 1;
-            //        transform.rotation = Quaternion.Euler(rotate);
-            //    }
-            //}
         }
 
         else if(Keyboard.current.rightArrowKey.isPressed && Keyboard.current.upArrowKey.isPressed)
@@ -196,8 +94,6 @@ public class PlayerController : MonoBehaviour
         position.x = position.x + 0.1f * horizontal;
         position.y = position.y + 0.1f * vertical;
         transform.position = position;
-
-
-
     }
 }
+
