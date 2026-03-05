@@ -70,3 +70,4 @@ public class ParallaxBG : MonoBehaviour
         transform.position = position;
     }
 }
+
